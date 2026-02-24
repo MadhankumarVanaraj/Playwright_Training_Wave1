@@ -28,9 +28,35 @@ await page.waitForTimeout(5000);
             await prompt.accept("Madhan Kumar")
         }else
             await prompt.dismiss()
+
     })
 
 await page.locator(`(//span[text()='Show'])[5]`).click();
 await page.waitForTimeout(3000); */
 
 });
+
+
+
+test('prompt alert', async({page})=>
+{
+await page.goto(`https://rahulshettyacademy.com/AutomationPractice/`);
+await page.locator(`#alertbtn`).click();
+
+// page.on(`dialog`,dialog=>dialog.dismiss());
+
+await page.waitForTimeout(2000);
+await page.locator(`#name`).fill(`Madhan Kumar`);
+await page.waitForTimeout(5000);
+
+
+test('prompt alert', async({page})=>
+{
+await page.goto(`https://rahulshettyacademy.com/AutomationPractice/`);
+await page.locator(`#alertbtn`).click();
+
+// page.on(`dialog`,dialog=>dialog.dismiss());
+
+await page.waitForTimeout(2000);
+await page.locator(`#name`).fill(`Madhan Kumar`);
+await page.waitForTimeout(5000);
